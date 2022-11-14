@@ -6,14 +6,25 @@ int DlnnaMassiva = Convert.ToInt32(Console.ReadLine());
 string [] getarray1 (int DlnnaMassiva)
 {
     string[] array1= new string [DlnnaMassiva];
-    for (int i = 0; i < DlnnaMassiva; i++)
+    for (int i = 0; i < array1.Length; i++)
     {
-        Console.WriteLine("vvedite strokovoe znachenie cherez (,) v covychkah ");
+        Console.WriteLine("vvedite strokovoe znachenie");
         array1[i] = Console.ReadLine();
     }
 
     return array1;
 }
 
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+     Console.WriteLine();
+ }
+
 string [] array1 = getarray1 (DlnnaMassiva);
-Console.WriteLine(array1);
+Console.WriteLine ("Vvedenyi Massiv");
+PrintArray (array1);
+Console.WriteLine("massiv po usloviyam zadachi");
